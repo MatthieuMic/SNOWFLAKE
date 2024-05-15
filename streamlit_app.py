@@ -24,7 +24,7 @@ ingredients_list = st.multiselect(
     , my_dataframe
     ,max_selections=5
 )
-
+import requests
 if ingredients_list:  
 	ingredients_string =''
 	for fruit_chosen in ingredients_list : 
@@ -40,4 +40,4 @@ if ingredients_list:
 		session.sql(my_insert_stmt).collect()
     
 	st.success(f'Your Smoothie is ordered!, {name_on_order}', icon="✅")
-import requests
+
